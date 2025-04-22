@@ -2,20 +2,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var hp = ""
-    @State var engine = ""
-    @State var weight = ""
-    var body: some View {
+        var body: some View {
         VStack {
-                Text("Advanced Car Creator")
-                    .font(.largeTitle)
-                    .padding()
-                Divider()
-                Text("Create New Car Information")
-                    .font(.title3)
+            Text("Advanced Car Creator")
+                .font(.largeTitle)
+                .padding()
+            Divider()
+            Text("Create New Car Information")
+                .font(.title3)
             NavigationStack {
                 NavigationLink {
-                    NewCarInfomationView()
+                    NewCarInfomationPage()
                 } label: {
                     Image(systemName: "car.badge.gearshape")
                 }
@@ -29,29 +26,24 @@ struct ContentView: View {
                     .padding()
                 NavigationStack {
                     NavigationLink {
-                        DesignNewCarView()
+                        DesignNewCarPage()
                     } label: {
                         Image(systemName: "car.side")
                     }
                     .padding()
-                    Spacer()
-                    Divider()
+                   Spacer()
+              
                     
-                    Text("Design New Car Look")
-                        .foregroundStyle(.red)
-                        .font(.system(size: 25, design: .monospaced))
+               
                     
                     
-                    
-                    
-                        Spacer()
-                        
-                        Spacer()
-                    }
-                    
+                  
                 }
+                
             }
-            
         }
+        
+    }
+}
     
 

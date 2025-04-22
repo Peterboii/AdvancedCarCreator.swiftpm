@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DesignNewCarView: View {
+struct DesignNewCarPage: View {
     var body: some View {
         Text("DF")
     }
