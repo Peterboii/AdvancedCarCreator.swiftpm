@@ -6,17 +6,18 @@ struct NewCarInfomationPage: View {
     @State var weight: Int?
     var body: some View {
         Text("Hosrepower")
-            
-        Text("Engine")
-            .font(.largeTitle)
+        .font(.largeTitle)
         TextField("Enter Horsepower Amount (000-1800)", value: $hp, format: .number)
             .textFieldStyle(.roundedBorder)
             .padding()
         Text("Engine")
             .font(.largeTitle)
-       
-        
-        TextField("Enter Engine Cylinder Number", value: $engine, format: .number)
+       TextField("Enter Engine Cylinder Number", value: $engine, format: .number)
+            .textFieldStyle(.roundedBorder)
+            .padding()
+        Text("Weight")
+            .font(.largeTitle)
+        TextField("Enter weight in kilograms", value: $weight, format: .number)
             .textFieldStyle(.roundedBorder)
             .padding()
     }
