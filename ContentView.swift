@@ -7,12 +7,12 @@ struct ContentView: View {
     @State var weight = ""
     var body: some View {
         VStack {
-                Text("Advanced Car Creator")
-                    .font(.largeTitle)
-                    .padding()
-                Divider()
-                Text("Create New Car Information")
-                    .font(.title3)
+            Text("Advanced Car Creator")
+                .font(.largeTitle)
+                .padding()
+            Divider()
+            Text("Create New Car Information")
+                .font(.title3)
             NavigationStack {
                 NavigationLink {
                     NewCarInfomationView()
@@ -29,29 +29,20 @@ struct ContentView: View {
                     .padding()
                 NavigationStack {
                     NavigationLink {
-                        DesignNewCarView()
+                        DesignNewCarPage()
                     } label: {
                         Image(systemName: "car.side")
                     }
                     .padding()
                     Spacer()
-                    Divider()
-                    
-                    Text("Design New Car Look")
-                        .foregroundStyle(.red)
-                        .font(.system(size: 25, design: .monospaced))
-                    
-                    
-                    
-                    
-                        Spacer()
-                        
-                        Spacer()
-                    }
-                    
+         
+                    Spacer()
                 }
+                
             }
-            
         }
+        
+    }
     
-
+    
+}
