@@ -26,11 +26,12 @@ struct ContentView: View {
                     .padding()
                 NavigationStack {
                     NavigationLink {
-                        DesignNewCarPage()
+                        
                     } label: {
                         Image(systemName: "car.side")
                     }
                     .padding()
+
                    Spacer()
               
                     
@@ -38,12 +39,21 @@ struct ContentView: View {
                     
                     
                   
+
+                    Spacer()
+         
+                    Spacer()
+
                 }
                 
             }
         }
         
     }
+
 }
+
+
+    
     
 
