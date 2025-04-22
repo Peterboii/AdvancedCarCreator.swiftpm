@@ -1,6 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var hp = ""
+    @State var engine = ""
+    @State var weight = ""
     var body: some View {
         VStack {
                 Text("Advanced Car Creator")
@@ -29,9 +33,20 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "car.side")
                     }
-                }
+                    .padding()
                     Spacer()
-                    Spacer()
+                    Divider()
+                    
+                    Text("Design New Car Look")
+                        .foregroundStyle(.red)
+                        .font(.system(size: 25, design: .monospaced))
+                    
+                    
+                    
+                    
+                        Spacer()
+                        
+                        Spacer()
                     }
                     
                 }
