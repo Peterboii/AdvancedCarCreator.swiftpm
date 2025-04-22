@@ -1,9 +1,11 @@
 import SwiftUI
-
+import PencilKit
 struct DesignNewCarPage: View {
     
     var body: some View {
-        Text("1")
+        Text("Car Design")
+            .font(.largeTitle)
+            .padding()
   
         
 
