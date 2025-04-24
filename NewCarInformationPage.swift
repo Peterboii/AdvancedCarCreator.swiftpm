@@ -1,13 +1,9 @@
 import SwiftUI
 
 struct NewCarInfomationPage: View {
-    @State var hp: Int?
-    @State var engine: Int?
-    @State var weight: Int?
-    @State var gr: Double
-    @State var acc: Double
-    @State var efficiency: Double
-
+    @State var gr: Double?
+    @State var acc: Double?
+    @State var efficiency: Double?
     @State var hp: Double?
     @State var engine: Double?
     @State var weight: Double?
