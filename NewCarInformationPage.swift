@@ -4,6 +4,10 @@ struct NewCarInfomationPage: View {
     @State var hp: Int?
     @State var engine: Int?
     @State var weight: Int?
+    @State var gr: Double
+    @State var acc: Double
+    @State var efficiency: Double
+
     var body: some View {
         Text("Hosrepower")
         .font(.largeTitle)
