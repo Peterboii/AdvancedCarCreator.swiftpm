@@ -12,7 +12,7 @@ struct ContentView: View {
                 .font(.title3)
             NavigationStack {
                 NavigationLink {
-                    NewCarInfomationPage()
+                    NewCarInfomationPage(ZeroToSixtyResult: Double())
                 } label: {
                     Image(systemName: "car.badge.gearshape")
                 }
