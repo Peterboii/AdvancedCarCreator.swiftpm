@@ -25,8 +25,10 @@ struct NewCarInfomationPage: View {
             .textFieldStyle(.roundedBorder)
             .padding()
         Text("Efficiency")
+        Text("GearRatio")
             .font(.largeTitle)
         TextField("Enter Efficiency", value: $efficiency, format: .number)
+        TextField("Enter Gear Ratio (2.0 - 6.0)", value: $gr, format: .number)
             .textFieldStyle(.roundedBorder)
             .padding()
     }
