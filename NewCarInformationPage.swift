@@ -24,6 +24,11 @@ struct NewCarInfomationPage: View {
         TextField("Enter weight in kilograms", value: $weight, format: .number)
             .textFieldStyle(.roundedBorder)
             .padding()
+        Text("Efficiency")
+            .font(.largeTitle)
+        TextField("Enter Efficiency", value: $efficiency, format: .number)
+            .textFieldStyle(.roundedBorder)
+            .padding()
     }
     func ZeroToSixtyCalculator() {
         ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
