@@ -33,7 +33,7 @@ struct NewCarInfomationPage: View {
             TextField("Enter Efficiency", value: $efficiency, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
-            Text("GearRatio")
+            Text("Gear Ratio")
                 .font(.largeTitle)
                 .padding()
             TextField("Enter Gear Ratio (2.0 - 8.0)", value: $gr, format: .number)
@@ -44,10 +44,9 @@ struct NewCarInfomationPage: View {
             TextField("Enter Acceleration (1.0-10.0)", value: $acc, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
-            Text("Enter Wheel Radius")
+            Text("Wheel Radius")
                 .font(.largeTitle)
-        
-            TextField("WheelRadius", value: $wr, format: .number)
+            TextField("Enter Wheel Radius (0.1-0.9)", value: $wr, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
         }
