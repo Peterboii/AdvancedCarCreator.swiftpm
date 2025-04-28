@@ -46,9 +46,10 @@ struct NewCarInfomationPage: View {
                 .padding()
             Text("Enter Wheel Radius")
                 .font(.largeTitle)
-            
-            
+        
             TextField("WheelRadius", value: $wr, format: .number)
+                .textFieldStyle(.roundedBorder)
+                .padding()
         }
     }
         func ZeroToSixtyCalculator() {
