@@ -9,8 +9,7 @@ struct NewCarInfomationPage: View {
     @State var weight: Double?
     @State var ZeroToSixtyResult: Double
     @State var wr: Double?
-
-    var body: some View {
+var body: some View {
         ScrollView {
             Text("Hosrepower")
                 .font(.largeTitle)
@@ -54,6 +53,9 @@ struct NewCarInfomationPage: View {
         func ZeroToSixtyCalculator() {
             ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
         }
+    func TorqueCalculator() {
+        
+    }
 }
     
     
