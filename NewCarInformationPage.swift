@@ -2,7 +2,7 @@ import SwiftUI
 
 struct NewCarInfomationPage: View {
     @State var gr: Double?
-    @State var acc: Double
+    @State var acc: Double?
     @State var efficiency: Double?
     @State var hp: Double?
     @State var engine: Double?
@@ -41,12 +41,14 @@ struct NewCarInfomationPage: View {
                 .padding()
             Text("Acceleration")
                 .font(.largeTitle)
-            
-            TextField("Enter Acceleration", value: $acc, format: .number)
+            TextField("Enter Acceleration (1.0-10.0)", value: $acc, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
             Text("Enter Wheel Radius")
                 .font(.largeTitle)
+            
+            
+            TextField("WheelRadius", value: $wr, format: .number)
         }
     }
         func ZeroToSixtyCalculator() {
