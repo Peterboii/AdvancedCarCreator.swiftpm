@@ -39,6 +39,10 @@ struct NewCarInfomationPage: View {
             TextField("Enter Gear Ratio (2.0 - 6.0)", value: $gr, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
+            
+            TextField("Enter Acceleration", value: $acc, format: .number)
+                .textFieldStyle(.roundedBorder)
+                .padding()
         }
     }
         func ZeroToSixtyCalculator() {
