@@ -51,8 +51,11 @@ struct NewCarInfomationPage: View {
                 .padding()
         }
     }
-    func ZeroToSixtyCalculator() {
-        ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
+        func ZeroToSixtyCalculator() {
+            ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
+        }
+    func TorqueCalculator() {
+        
     }
     
     let force = (weight ?? 0) * (acc ?? 0)
