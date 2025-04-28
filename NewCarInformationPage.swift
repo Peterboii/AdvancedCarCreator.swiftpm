@@ -9,7 +9,7 @@ struct NewCarInfomationPage: View {
     @State var weight: Double?
     @State var ZeroToSixtyResult: Double
     @State var wr: Double?
-
+    @State var returnTorque: Double
     var body: some View {
         ScrollView {
             Text("Hosrepower")
@@ -27,7 +27,7 @@ struct NewCarInfomationPage: View {
             TextField("Enter Engine Cylinder Number", value: $engine, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
-             Text("Efficiency")
+            Text("Efficiency")
                 .font(.largeTitle)
                 .padding()
             TextField("Enter Efficiency", value: $efficiency, format: .number)
@@ -51,10 +51,12 @@ struct NewCarInfomationPage: View {
                 .padding()
         }
     }
-        func ZeroToSixtyCalculator() {
-            ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
-        }
+    func ZeroToSixtyCalculator() {
+        ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
+    }
+    
+    let force = (weight ?? 0) * (acc ?? 0)
 }
-    
-    
+
+
 
