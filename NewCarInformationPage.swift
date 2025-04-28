@@ -8,6 +8,8 @@ struct NewCarInfomationPage: View {
     @State var engine: Double?
     @State var weight: Double?
     @State var ZeroToSixtyResult: Double
+    @State var wr: Double?
+
     var body: some View {
         ScrollView {
             Text("Hosrepower")
@@ -43,6 +45,8 @@ struct NewCarInfomationPage: View {
             TextField("Enter Acceleration", value: $acc, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
+            Text("Enter Wheel Radius")
+                .font(.largeTitle)
         }
     }
         func ZeroToSixtyCalculator() {
