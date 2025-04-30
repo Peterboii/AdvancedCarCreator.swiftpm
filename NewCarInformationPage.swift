@@ -50,13 +50,19 @@ struct NewCarInfomationPage: View {
                 .textFieldStyle(.roundedBorder)
                 .padding()
             
-            
-            Button("Calculate 0-60") {
-                ZeroToSixtyCalculator()
-            }
-            
-            Button("Calculate Torque") {
-                TorqueCalculator()
+              HStack {
+                Button("Calculate 0-60") {
+                    ZeroToSixtyCalculator()
+                }
+                VStack {
+                    
+                }
+                Button("Calculate Torque") {
+                    TorqueCalculator()
+                }
+                VStack {
+                    
+                }
             }
         }
     }
