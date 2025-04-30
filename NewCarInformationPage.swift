@@ -55,9 +55,14 @@ struct NewCarInfomationPage: View {
                 ZeroToSixtyCalculator()
             }
             
+            
+            Text("\(ZeroToSixtyResult)")
+            
             Button("Calculate Torque") {
                 TorqueCalculator()
             }
+            
+            Text("\(returnTorque)")
         }
     }
         func ZeroToSixtyCalculator() {
