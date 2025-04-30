@@ -50,39 +50,41 @@ struct NewCarInfomationPage: View {
                 .textFieldStyle(.roundedBorder)
                 .padding()
             
-              HStack {
-                Button("Calculate 0-60") {
-                    ZeroToSixtyCalculator()
-                }
+            HStack(spacing: 30) {
                 VStack {
+                    Text("\(ZeroToSixtyResult)")
+                        .font(.title)
+                    
+                    Button("Calculate 0-60") {
+                        ZeroToSixtyCalculator()
+                    }
+                    .buttonStyle(.borderedProminent)
                     
                 }
-                Button("Calculate Torque") {
-                    TorqueCalculator()
-                }
                 VStack {
+                    Text("\(returnTorque)")
+                        .font(.title)
+                    
+                    Button("Calculate Torque") {
+                        TorqueCalculator()
+                    }
+                    .buttonStyle(.borderedProminent)
                     
                 }
-            
-            Text("\(ZeroToSixtyResult)")
-            
-            Button("Calculate Torque") {
-                TorqueCalculator()
             }
             
-            Text("\(returnTorque)")
+            
+            
         }
+        
+        
+        
     }
-        func ZeroToSixtyCalculator() {
-            ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
-        }
+    func ZeroToSixtyCalculator() {
+        ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
+    }
     func TorqueCalculator() {
         let force = (weight ?? 0) * (acc ?? 0)
         returnTorque = (force * (wr ?? 0))/((gr ?? 0) * (efficiency ?? 0))
     }
-    
-   
 }
-
-
-
