@@ -65,9 +65,10 @@ struct NewCarInfomationPage: View {
         }
     func TorqueCalculator() {
         let force = (weight ?? 0) * (acc ?? 0)
-
+        returnTorque = (force * (wr ?? 0))/((gr ?? 0) * (efficiency ?? 0))
     }
     
+   
 }
 
 
