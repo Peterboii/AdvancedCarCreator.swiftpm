@@ -49,16 +49,25 @@ struct NewCarInfomationPage: View {
             TextField("Enter Wheel Radius (0.1-0.9)", value: $wr, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
+            
+            
+            Button("Calculate 0-60") {
+                ZeroToSixtyCalculator()
+            }
+            
+            Button("Calculate Torque") {
+                TorqueCalculator()
+            }
         }
     }
         func ZeroToSixtyCalculator() {
             ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
         }
     func TorqueCalculator() {
-        
+        let force = (weight ?? 0) * (acc ?? 0)
+
     }
     
-    let force = (weight ?? 0) * (acc ?? 0)
 }
 
 
