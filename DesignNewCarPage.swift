@@ -6,7 +6,7 @@ struct DesignNewCarPage: View {
         Text("Car Design")
             .font(.largeTitle)
             .padding()
-  
+            
         
 
         
