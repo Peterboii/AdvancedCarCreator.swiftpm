@@ -11,6 +11,7 @@ struct NewCarInfomationPage: View {
     @State var wr: Double?
     @State var returnTorque: Double
     @State var dragCoefficient: Double?
+    @State var frontalArea: Double?
     var body: some View {
         ScrollView {
             Text("Hosrepower")
