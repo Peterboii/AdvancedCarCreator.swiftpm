@@ -89,7 +89,7 @@ struct NewCarInfomationPage: View {
         returnTorque = (force * (wr ?? 0))/((gr ?? 0) * (efficiency ?? 0))
     }
     func TopSpeedCalculator() {
-        
+        let hpFactor = (hp ?? 0) * 375.0
     }
 }
 
