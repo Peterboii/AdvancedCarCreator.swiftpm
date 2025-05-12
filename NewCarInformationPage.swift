@@ -54,7 +54,7 @@ struct NewCarInfomationPage: View {
             
             HStack(spacing: 30) {
                 VStack {
-                    Text("\(ZeroToSixtyResult)")
+                    Text("\(ZeroToSixtyResult, specifier: "%.2f")")
                         .font(.title)
                     
                     Button("Calculate 0-60") {
@@ -64,13 +64,17 @@ struct NewCarInfomationPage: View {
                     
                 }
                 VStack {
-                    Text("\(returnTorque)")
+                    Text("\(returnTorque, specifier: "%.2f")")
                         .font(.title)
                     
                     Button("Calculate Torque") {
                         TorqueCalculator()
                     }
                     .buttonStyle(.borderedProminent)
+                    VStack {
+                        Text("\(TopSpeedCalculator(), specifier: "%.1f")")
+                            .font(.largeTitle)
+                    }
                     
                 }
                 
