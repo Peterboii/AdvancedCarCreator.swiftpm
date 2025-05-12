@@ -73,6 +73,15 @@ struct NewCarInfomationPage: View {
                     .buttonStyle(.borderedProminent)
                     
                 }
+                
+                VStack {
+                    
+                    Button("Calculate Top Speed") {
+                        TopSpeedCalculator()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    
+                }
             }
             
             
