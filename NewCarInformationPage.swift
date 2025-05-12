@@ -89,10 +89,11 @@ struct NewCarInfomationPage: View {
         let force = (weight ?? 0) * (acc ?? 0)
         returnTorque = (force * (wr ?? 0))/((gr ?? 0) * (efficiency ?? 0))
     }
-    func TopSpeedCalculator() {
+    func TopSpeedCalculator() -> Double {
         let hpFactor = (hp ?? 0) * 375.0
         let drag = (dragCoefficient ?? 0.0) * (frontalArea ?? 0.0)
-        return speedMPH = (hpFactor / drag)
+        let speedMph = (hpFactor / drag)
+        return speedMph
     }
 }
 
