@@ -72,28 +72,17 @@ struct NewCarInfomationPage: View {
                     }
                     .buttonStyle(.borderedProminent)
                     VStack {
-                        Text("\(TopSpeedCalculator(), specifier: "%.1f")")
+                        Button("Calculate Top Speed") {
+                            TopSpeedCalculator()
+                        }
+                        .buttonStyle(.borderedProminent)
+                         Text("\(TopSpeedCalculator(), specifier: "%.1f")")
                             .font(.largeTitle)
                     }
                     
                 }
-                
-                VStack {
-                    
-                    Button("Calculate Top Speed") {
-                        TopSpeedCalculator()
-                    }
-                    .buttonStyle(.borderedProminent)
-                    
-                }
             }
-            
-            
-            
         }
-        
-        
-        
     }
     func ZeroToSixtyCalculator() {
         ZeroToSixtyResult = (weight ?? 0)/(hp ?? 0) * 0.07
