@@ -91,6 +91,7 @@ struct NewCarInfomationPage: View {
     }
     func TopSpeedCalculator() {
         let hpFactor = (hp ?? 0) * 375.0
+        return speedMPH = (hpFactor / drag)
     }
 }
 
