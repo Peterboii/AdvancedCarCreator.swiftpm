@@ -12,10 +12,15 @@ struct DisplayView: View {
             VStack {
                 PreviewCanvas(drawing: drawing)
                 if let image = drawing.image (from: drawing.bounds, scale: 1.0) {
-                    
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
                 } else {
                     Text("No Available Drawing")
                 }
+                PKCanvasView(drawing: drawing)
+                
+               
             }
             
             VStack(spacing: 40) {
