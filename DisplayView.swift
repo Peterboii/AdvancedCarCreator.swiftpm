@@ -10,7 +10,7 @@ struct DisplayView: View {
             
             
             VStack {
-                PreviewCanvas(drawing: drawing)
+               
                 if let image = drawing.image (from: drawing.bounds, scale: 1.0) {
                     Image(uiImage: image)
                         .resizable()
@@ -18,7 +18,7 @@ struct DisplayView: View {
                 } else {
                     Text("No Available Drawing")
                 }
-                PKCanvasView(drawing: drawing)
+                PKCanvasView(drawing: $drawing)
                 
                
             }
