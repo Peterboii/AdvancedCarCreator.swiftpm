@@ -4,14 +4,15 @@ struct NewCarInfomationPage: View {
     @State var gr: Double?
     @State var acc: Double?
     @State var efficiency: Double?
-    @State var hp: Double?
+    @State var hp: Double? = nil
     @State var engine: Double?
     @State var weight: Double?
     @State var ZeroToSixtyResult: Double
     @State var wr: Double?
     @State var returnTorque: Double
-    @State var dragCoefficient: Double?
-    @State var frontalArea: Double?
+    @State var dragCoefficient: Double? = nil
+    @State var frontalArea: Double? = nil
+    @Binding var topSpeedCalculator: Double
     var body: some View {
         ScrollView {
             Text("Hosrepower")
@@ -73,7 +74,7 @@ struct NewCarInfomationPage: View {
                     .buttonStyle(.borderedProminent)
                     VStack {
                         Button("Calculate Top Speed") {
-                            TopSpeedCalculator()
+                           topSpeedCalculator =  TopSpeedCalculator()
                         }
                         .buttonStyle(.borderedProminent)
                          Text("\(TopSpeedCalculator(), specifier: "%.1f")")
