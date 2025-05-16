@@ -10,7 +10,11 @@ struct DisplayView: View {
             
             
             VStack {
-                PreviewCanvas(drawing: drawing)
+                PKCanvasView(drawing: drawing)
+                
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
             }
             
             VStack(spacing: 40) {
