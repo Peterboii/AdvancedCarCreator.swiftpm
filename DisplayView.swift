@@ -1,8 +1,8 @@
 import SwiftUI
 import PencilKit
 struct DisplayView: View {
-@Binding var ZeroToSixtyCalculator: Double
-@Binding var TorqueCalculator: Double
+@Binding var zeroToSixtyCalculator: Double
+@Binding var torqueCalculator: Double
 @Binding var topSpeedCalculator: Double
 //@State var drawing = PKDrawing()
     var body: some View {
@@ -29,8 +29,8 @@ struct DisplayView: View {
             
             VStack(spacing: 40) {
                 
-                Text("\(ZeroToSixtyCalculator) Seconds")
-                Text("\(TorqueCalculator) lbs")
+                Text("\(zeroToSixtyCalculator) Seconds")
+                Text("\(torqueCalculator) lbs")
                 Text("\(topSpeedCalculator) mph")
                 
                 
