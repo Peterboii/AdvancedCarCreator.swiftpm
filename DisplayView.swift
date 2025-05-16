@@ -11,6 +11,11 @@ struct DisplayView: View {
             
             VStack {
                 PreviewCanvas(drawing: drawing)
+                if let image = drawing.image (from: drawing.bounds, scale: 1.0) {
+                    
+                } else {
+                    Text("No Available Drawing")
+                }
             }
             
             VStack(spacing: 40) {
