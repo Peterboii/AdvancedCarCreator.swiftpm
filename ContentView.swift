@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var zeroToSixy: Double = 0.0
+    @State var torque: Double = 0.0
+    @State var topSpeed: Binding<Double> = .constant(0.0)
     
         var body: some View {
         VStack {
@@ -12,7 +15,7 @@ struct ContentView: View {
                 .font(.title3)
             NavigationStack {
                 NavigationLink {
-                    NewCarInfomationPage(acc: Double(), ZeroToSixtyResult: Double(), returnTorque: Double(), topSpeedCalculator: Double() )
+                    NewCarInfomationPage(ZeroToSixtyResult: $zeroToSixy, returnTorque: $torque, topSpeedCalculator: topSpeed)
                 } label: {
                     Image(systemName: "car.badge.gearshape")
                 }

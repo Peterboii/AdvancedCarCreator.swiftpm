@@ -2,14 +2,15 @@ import SwiftUI
 
 struct NewCarInfomationPage: View {
     @State var gr: Double?
+    
     @State var acc: Double?
     @State var efficiency: Double?
     @State var hp: Double? = nil
     @State var engine: Double?
     @State var weight: Double?
-    @State var ZeroToSixtyResult: Double
+    @Binding var ZeroToSixtyResult: Double
     @State var wr: Double?
-    @State var returnTorque: Double
+    @Binding var returnTorque: Double
     @State var dragCoefficient: Double? = nil
     @State var frontalArea: Double? = nil
     @Binding var topSpeedCalculator: Double
@@ -77,7 +78,7 @@ struct NewCarInfomationPage: View {
                            topSpeedCalculator =  TopSpeedCalculator()
                         }
                         .buttonStyle(.borderedProminent)
-                         Text("\(TopSpeedCalculator(), specifier: "%.1f")")
+                         Text("\(topSpeedCalculator, specifier: "%.1f")")
                             .font(.largeTitle)
                     }
                     
