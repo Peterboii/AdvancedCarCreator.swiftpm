@@ -73,14 +73,13 @@ struct NewCarInfomationPage: View {
                         TorqueCalculator()
                     }
                     .buttonStyle(.borderedProminent)
-                    VStack {
+                       Text("\(topSpeedCalculator, specifier: "%.1f")")
+                           .font(.largeTitle)
                         Button("Calculate Top Speed") {
                            topSpeedCalculator =  TopSpeedCalculator()
                         }
                         .buttonStyle(.borderedProminent)
-                         Text("\(topSpeedCalculator, specifier: "%.1f")")
-                            .font(.largeTitle)
-                    }
+                    
                     
                 }
             }
