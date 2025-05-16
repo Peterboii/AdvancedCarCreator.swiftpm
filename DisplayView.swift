@@ -24,7 +24,7 @@ struct DisplayView: View {
             }
             
             VStack(spacing: 40) {
-                
+            
                 Text("\(ZeroToSixtyCalculator) Seconds")
                 Text("\(TorqueCalculator) lbs")
                 Text("\(topSpeedCalculator) mph")
