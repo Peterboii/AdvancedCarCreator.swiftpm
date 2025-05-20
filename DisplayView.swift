@@ -4,24 +4,24 @@ struct DisplayView: View {
 @Binding var zeroToSixtyCalculator: Double
 @Binding var torqueCalculator: Double
 @Binding var topSpeedCalculator: Double
-//@State var drawing = PKDrawing()
+@State var drawing = CanvasView(canvasData: PKCanvasView())
     var body: some View {
         HStack {
             
             
             VStack {
-//                CanvasView(drawing: $drawing)
-//                    .frame(height: 350)
-//                    .border(Color.blue)
-//                
-//                if !drawing.bounds.isEmpty {
-//                    Image(uiImage: drawing.image(from: drawing.bounds, scale: 1.0))
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 350, height: 350)
-//                } else {
-//                    Text("No Available Drawing")
-//                }
+                CanvasView(drawing: $CanvasData)
+                    .frame(height: 350)
+                    .border(Color.blue)
+                
+                if !drawing.bounds.isEmpty {
+                    Image(uiImage: drawing.image(from: drawing.bounds, scale: 1.0))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 350, height: 350)
+                } else {
+                    Text("No Available Drawing")
+                }
              
                 
                
