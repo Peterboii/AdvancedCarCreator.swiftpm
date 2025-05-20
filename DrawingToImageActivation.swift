@@ -2,7 +2,9 @@ import SwiftUI
 import PencilKit
 
 class CanvasData: ObservableObject {
-    @Published var canvasView = PKCanvasView()
+
     
-    var 
+    var drawingImage: UIImage? {
+        
+    }
 }
