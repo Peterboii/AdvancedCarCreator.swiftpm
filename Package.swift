@@ -19,7 +19,7 @@ let package = Package(
             bundleIdentifier: "org.jhhs.628432.Advanced-Car-Creator",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .paper),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.mint),
             supportedDeviceFamilies: [
                 .pad,
