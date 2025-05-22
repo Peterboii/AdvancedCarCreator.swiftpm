@@ -16,7 +16,8 @@ struct CanvasView: UIViewRepresentable {
     
     
     func makeUIView(context: Context) -> PKCanvasView {
-        
+       
+        return canvasData.canvasView
     }
 }
 
