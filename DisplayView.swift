@@ -4,18 +4,18 @@ struct DisplayView: View {
 @Binding var zeroToSixtyCalculator: Double
 @Binding var torqueCalculator: Double
 @Binding var topSpeedCalculator: Double
-@State var drawing = CanvasView(canvasData: PKCanvasView())
+@StateObject var canvasData = canvasData()
     var body: some View {
         HStack {
             
             
             VStack {
-                CanvasView(drawing: $CanvasData)
+                CanvasView(canvasData: $canvasData)
                     .frame(height: 350)
                     .border(Color.blue)
                 
                 if !drawing.bounds.isEmpty {
-                    Image(uiImage: drawing.image(from: drawing.bounds, scale: 1.0))
+                    Image(uiImage: image(from: drawing.bounds, scale: 1.0))
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350, height: 350)
