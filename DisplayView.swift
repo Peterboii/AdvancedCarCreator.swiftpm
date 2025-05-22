@@ -16,8 +16,9 @@ struct DisplayView: View {
                 
           
                     
-                if let image = canvasData.drawingImage {
-                    Image(uiImage: image)
+                if let pngData = image.pngData {
+                    
+                
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350, height: 350)

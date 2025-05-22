@@ -9,9 +9,18 @@ class CanvasData: ObservableObject {
         
         return bounds.isEmpty ? nil : canvasView.drawing.image(from: bounds, scale: 1.0)
     }
+    
+    func clear() {
+        canvasView.drawing = PKDrawing()
+    }
+    
+    func exportPNGData() -> Data? {
+        guard let image = drawingImage else { return nil }
+        return image.pngData()
+    }
 }
 
-struct canvasView: UIViewRepresentable {
+struct CanvasView: UIViewRepresentable {
     @ObservedObject var canvasData = CanvasData
     
     
