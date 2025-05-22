@@ -16,7 +16,7 @@ struct CanvasView: UIViewRepresentable {
     
     
     func makeUIView(context: Context) -> PKCanvasView {
-        
+        canvasData.canvasView.drawingPolicy = .anyInput
     }
 }
 
