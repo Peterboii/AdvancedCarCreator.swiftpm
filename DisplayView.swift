@@ -14,7 +14,9 @@ struct DisplayView: View {
                     .frame(height: 350)
                     .border(Color.blue)
                 
-                if !drawing.bounds.isEmpty {
+          
+                    
+                if let image = canvasData.drawingImage {
                     Image(uiImage: image(from: drawing.bounds, scale: 1.0))
                         .resizable()
                         .scaledToFit()
