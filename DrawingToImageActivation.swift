@@ -20,5 +20,8 @@ struct CanvasView: UIViewRepresentable {
        
         return canvasData.canvasView
     }
+    func updateUIView(_ uiView: PKCanvasView, context: Context) {
+        
+    }
 }
 

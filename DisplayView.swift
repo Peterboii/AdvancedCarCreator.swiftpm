@@ -4,7 +4,7 @@ struct DisplayView: View {
 @Binding var zeroToSixtyCalculator: Double
 @Binding var torqueCalculator: Double
 @Binding var topSpeedCalculator: Double
-@State var drawing = CanvasView(canvasData: PKCanvasView())
+@State var drawing = canvasView(canvasData: PKCanvasView())
     var body: some View {
         HStack {
             
@@ -14,11 +14,9 @@ struct DisplayView: View {
                     .frame(height: 350)
                     .border(Color.blue)
                 
-                if !drawing.bounds.isEmpty {
-                    Image(uiImage: drawing.image(from: drawing.bounds, scale: 1.0))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 350, height: 350)
+                if let image = canvasData.drawingImage {
+                    
+                }
                 } else {
                     Text("No Available Drawing")
                 }
