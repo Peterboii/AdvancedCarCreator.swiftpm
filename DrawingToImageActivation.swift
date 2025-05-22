@@ -10,8 +10,13 @@ class CanvasData: ObservableObject {
         return bounds.isEmpty ? nil : canvasView.drawing.image(from: bounds, scale: 1.0).
     }
 }
+
+struct CanvasView: UIViewRepresentable {
+    @ObservedObject var canvasData = CanvasData()
+    
+    
     func makeUIView(context: Context) -> PKCanvasView {
         
     }
-    
+}
 
