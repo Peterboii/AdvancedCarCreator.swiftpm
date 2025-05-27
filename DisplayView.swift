@@ -4,31 +4,30 @@ struct DisplayView: View {
 @Binding var zeroToSixtyCalculator: Double
 @Binding var torqueCalculator: Double
 @Binding var topSpeedCalculator: Double
-@StateObject var canvasData = CanvasData()
+//@StateObject var IsItCanvasData = CanvasData()
     var body: some View {
         HStack {
             
             
-            VStack {
-                CanvasView(canvasData: canvasData)
-                    .frame(height: 350)
-                    .border(Color.blue)
-                
-          
-                    
-                if let pngData = image.pngData {
-                    
-                
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 350, height: 350)
-                } else {
-                    Text("No Available Drawing")
-                }
-             
-                
-               
-            }
+//            VStack {
+////                CanvasView(canvasData: DrawingCanvasView(TheCanvasData: $IsItCanvasData))
+//                    .frame(height: 350)
+//                    .border(Color.blue)
+//                Button("Eradicate drawing") {
+//                    IsItCanvasData.clear()
+//                }
+//                
+//          
+//                    
+//                if let image = IsItCanvasData.drawingImage {
+//                Image(uiImage: image)
+//                } else {
+//                    Text("No Available Drawing")
+//                }
+//          
+//                
+//               
+//            }
             
             VStack(spacing: 40) {
                 
