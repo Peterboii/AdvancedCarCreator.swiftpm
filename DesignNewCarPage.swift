@@ -4,7 +4,9 @@ import PencilKit
 struct DesignNewCarPage: View {
     var body: some View {
         Text("Car Design")
-            .font(.largeTitle)
+            .font(.system(size: 32, design: .serif))
+            .foregroundStyle(.red)
+            .bold()
             .padding()
     }
 }
@@ -22,7 +24,7 @@ struct DrawingView: View {
             }
             .padding()
         }
-        .navigationBarTitle("Draw New Car", displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
     }
 }
 

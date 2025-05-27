@@ -17,45 +17,65 @@ struct NewCarInfomationPage: View {
     var body: some View {
         ScrollView {
             Text("Horsepower")
-                .font(.largeTitle)
+                .font(.system(size: 32, design: .serif))
+                .foregroundStyle(.red)
+                .bold()
+                .padding()
+                
             TextField("Enter Horsepower Amount (000-1800)", value: $hp, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
                 .keyboardType(.numberPad)
             Text("Weight")
-                .font(.largeTitle)
+                .font(.system(size: 32, design: .serif))
+                .foregroundStyle(.red)
+                .bold()
+                .padding()
             TextField("Enter weight in kilograms", value: $weight, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
                 .keyboardType(.numberPad)
             Text("Engine")
-                .font(.largeTitle)
+                .font(.system(size: 32, design: .serif))
+                .foregroundStyle(.red)
+                .bold()
+                .padding()
             TextField("Enter Engine Cylinder Number", value: $engine, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
                 .keyboardType(.numberPad)
             Text("Efficiency")
-                .font(.largeTitle)
+                .font(.system(size: 32, design: .serif))
+                .foregroundStyle(.red)
+                .bold()
                 .padding()
             TextField("Enter Efficiency", value: $efficiency, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
                 .keyboardType(.numberPad)
             Text("Gear Ratio")
-                .font(.largeTitle)
+                .font(.system(size: 32, design: .serif))
+                .foregroundStyle(.red)
+                .bold()
                 .padding()
             TextField("Enter Gear Ratio (2.0 - 8.0)", value: $gr, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
                 .keyboardType(.numberPad)
             Text("Acceleration")
-                .font(.largeTitle)
+                .font(.system(size: 32, design: .serif))
+                .foregroundStyle(.red)
+                .bold()
+                .padding()
             TextField("Enter Acceleration (1.0-10.0)", value: $acc, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
                 .keyboardType(.numberPad)
             Text("Wheel Radius")
-                .font(.largeTitle)
+                .font(.system(size: 32, design: .serif))
+                .foregroundStyle(.red)
+                .bold()
+                .padding()
             TextField("Enter Wheel Radius (0.1-0.9)", value: $wr, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .padding()
@@ -64,28 +84,48 @@ struct NewCarInfomationPage: View {
             HStack(spacing: 30) {
                 VStack {
                     Text("\(ZeroToSixtyResult, specifier: "%.2f")")
-                        .font(.title)
+                        .font(.system(size: 32, design: .serif))
+                        .foregroundStyle(.blue)
+                        .bold()
+                        .padding()
                     
                     Button("Calculate 0-60") {
                         ZeroToSixtyCalculator()
                     }
+                    .font(.system(size: 18, design: .serif))
+                    .foregroundStyle(.black)
+                    .bold()
                     .buttonStyle(.borderedProminent)
-                    
+                    .padding()
                 }
                 VStack {
                     Text("\(returnTorque, specifier: "%.2f")")
-                        .font(.title)
+                        .font(.system(size: 32, design: .serif))
+                        .foregroundStyle(.blue)
+                        .bold()
+                        .padding()
                     
                     Button("Calculate Torque") {
                         TorqueCalculator()
                     }
+                    .font(.system(size: 18, design: .serif))
+                    .foregroundStyle(.black)
+                    .bold()
                     .buttonStyle(.borderedProminent)
+                    .padding()
                        Text("\(topSpeedCalculator, specifier: "%.1f")")
-                           .font(.largeTitle)
+                        .font(.system(size: 32, design: .serif))
+                        .foregroundStyle(.blue)
+                        .bold()
+                        .padding()
                         Button("Calculate Top Speed") {
                            topSpeedCalculator =  TopSpeedCalculator()
                         }
+                        .font(.system(size: 18, design: .serif))
+                        .foregroundStyle(.black)
+                        .bold()
                         .buttonStyle(.borderedProminent)
+                        .padding()
                     
                     
                 }
@@ -106,4 +146,3 @@ struct NewCarInfomationPage: View {
         return speedMph
     }
 }
-
