@@ -61,7 +61,7 @@ struct ContentView: View {
                         .padding()
                     NavigationStack {
                         NavigationLink {
-//   DisplayView(zeroToSixtyCalculator: $zeroToSixy, torqueCalculator: $torque, topSpeedCalculator: $topSpeed)
+DisplayView(zeroToSixtyCalculator: $returnZeroToSixty, torqueCalculator: $ReturnTorque, topSpeedCalculator: returnTopSpeed)
                         } label: {
                             Image(systemName: "display.and.arrow")
                         }
