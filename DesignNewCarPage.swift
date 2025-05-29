@@ -17,6 +17,9 @@ struct DrawingView: View {
     @AppStorage("savedDrawing") var savedDrawingData: Data = Data()
     var body: some View {
         VStack {
+            Button("Save Drawing") {
+                saveDrawing(currentDrawing)
+            }
             CanvasView(canvasData: $canvasView)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
@@ -28,7 +31,7 @@ struct DrawingView: View {
         .navigationBarTitle("", displayMode: .inline)
     }
     func saveDrawing(_ drawing: PKDrawing) {
-        saveDrawingData = drawing.dataRepresentation()
+        savedDrawingData = drawing.dataRepresentation()
     }
 }
 
