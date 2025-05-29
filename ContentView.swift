@@ -63,7 +63,7 @@ struct ContentView: View {
                         NavigationLink {
 DisplayView(zeroToSixtyCalculator: $returnZeroToSixty, torqueCalculator: $ReturnTorque, topSpeedCalculator: returnTopSpeed)
                         } label: {
-                            Image(systemName: "display.and.arrow")
+                            Image(systemName: "display.and.arrow.down")
                         }
                         
                     }
