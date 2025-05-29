@@ -14,8 +14,17 @@ struct DisplayView: View {
                 DrawingCanvasView(TheCanvasData:  CanvasData())
                     .frame(height: 350)
                     .border(Color.blue)
-                Button("Eradicate drawing") {
-                    IsItCanvasData.clear()
+                    .padding()
+                HStack {
+                    Button("Save") {
+                        IsItCanvasData.saveDrawing()
+                    }
+                    Button("Load") {
+                        IsItCanvasData.loadDrawing()
+                    }
+                    Button("Eradicate drawing") {
+                        IsItCanvasData.clear()
+                    }
                 }
                 
           
@@ -25,6 +34,7 @@ struct DisplayView: View {
                 } else {
                     Text("No Available Drawing")
                 }
+                   
              
                 
                
@@ -32,9 +42,13 @@ struct DisplayView: View {
             
             VStack(spacing: 40) {
                 
-                Text("\(zeroToSixtyCalculator) Seconds")
-                Text("\(torqueCalculator) lbs")
-                Text("\(topSpeedCalculator) mph")
+                Text("\(zeroToSixtyCalculator, specifier: "%.2f") Seconds")
+                    .padding()
+                
+                Text("\(torqueCalculator, specifier: "%.1f") lbs")
+                    .padding()
+                Text("\(topSpeedCalculator, specifier: "%.1f") mph")
+                    .padding()
                 
                 
             }
