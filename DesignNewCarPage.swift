@@ -28,7 +28,10 @@ struct DrawingView: View {
         .navigationBarTitle("", displayMode: .inline)
     }
     func saveDrawing(_ drawing: PKDrawing) {
-        saveDrawingData = drawing.dataRepresentation()
+        savedDrawingData = drawing.dataRepresentation()
+    }
+    func loadDrawing() -> PKDrawing {
+       (try? PKDrawing(data: savedDrawingData)) ?? PKDrawing()
     }
 }
 
