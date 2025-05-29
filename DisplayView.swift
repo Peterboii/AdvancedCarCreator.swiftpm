@@ -5,6 +5,7 @@ struct DisplayView: View {
 @Binding var torqueCalculator: Double
 @Binding var topSpeedCalculator: Double
 @StateObject var IsItCanvasData = CanvasData()
+    @AppStorage("savedDrawing") var savedDrawingData: Data = Data()
     var body: some View {
         HStack {
             
