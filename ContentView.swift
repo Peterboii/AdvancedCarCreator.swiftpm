@@ -8,8 +8,8 @@ struct ContentView: View {
     @State var ReturnTorque: Double = 0.0
     @State var returnTopSpeed: Binding<Double> = .constant(0.0)
     
-        var body: some View {
-            
+    var body: some View {
+        
         VStack {
             Text("Advanced Car Creator")
                 .font(.system(size: 35, design: .serif))
@@ -55,14 +55,16 @@ struct ContentView: View {
                     }
                     .foregroundStyle(.blue)
                     .padding()
-
-                   Spacer()
-              Text("Once you have entered and calculated your car's infromation and design, Click icon to view your new car, and its stats.")
-                        .font(.system(size: 15, design: .serif))
-                        .padding()
+                    
+                    Spacer()
+                    Text("Once you have entered and calculated your car's infromation and design, Click icon to view your new car, and its stats.")
+                        .foregroundStyle(.red)
+                        .font(.system(size: 19, design: .serif))
+                        .bold()
+                    .padding()
                     NavigationStack {
                         NavigationLink {
-DisplayView(zeroToSixtyCalculator: $returnZeroToSixty, torqueCalculator: $ReturnTorque, topSpeedCalculator: returnTopSpeed)
+                            DisplayView(zeroToSixtyCalculator: $returnZeroToSixty, torqueCalculator: $ReturnTorque, topSpeedCalculator: returnTopSpeed)
                         } label: {
                             Image(systemName: "display.and.arrow.down")
                         }
@@ -70,25 +72,25 @@ DisplayView(zeroToSixtyCalculator: $returnZeroToSixty, torqueCalculator: $Return
                         .padding()
                     }
                     
-               
                     
                     
-                  
-
+                    
+                    
+                    
                     Spacer()
-         
+                    
                     Spacer()
-
+                    
                 }
                 
             }
         }
-   
+        
     }
-
+    
 }
 
 
-    
-    
+
+
 
