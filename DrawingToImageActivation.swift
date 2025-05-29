@@ -1,5 +1,6 @@
 import SwiftUI
 import PencilKit
+import UIKit
 
 class CanvasData: ObservableObject {
     @Published var drawing = PKDrawing()
@@ -18,7 +19,19 @@ class CanvasData: ObservableObject {
         guard let image = drawingImage else { return nil }
         return image.pngData()
     }
-}
+    func saveDrawing() {
+        let data = drawing.dataRepresentation()
+        UserDefaults.standard.set(data, forKey: "savedDrawing")
+    }
+    func loadDrawing() {
+        if let data = UserDefaults.standard.data(forKey: "savedDrawing"),
+            let loadedDrawing = try? PKDrawing(data: data) {
+                drawing = loadedDrawing
+            }
+        }
+    }
+
+
 
 struct DrawingCanvasView: UIViewRepresentable {
     @ObservedObject var TheCanvasData: CanvasData
