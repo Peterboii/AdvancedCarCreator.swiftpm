@@ -13,7 +13,7 @@ struct DesignNewCarPage: View {
 
 struct DrawingView: View {
     @State var canvasView = PKCanvasView()
-    
+    @AppStorage("savedDrawing") var savedDrawingData: Data = Data()
     var body: some View {
         VStack {
             CanvasView(canvasData: $canvasView)

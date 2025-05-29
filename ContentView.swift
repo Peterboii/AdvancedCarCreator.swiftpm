@@ -34,6 +34,7 @@ struct ContentView: View {
                     Image(systemName: "car.badge.gearshape")
                 }
                 
+                
                 .foregroundStyle(.blue)
                 .padding()
                 Spacer()
@@ -65,7 +66,8 @@ DisplayView(zeroToSixtyCalculator: $returnZeroToSixty, torqueCalculator: $Return
                         } label: {
                             Image(systemName: "display.and.arrow.down")
                         }
-                        
+                        .foregroundStyle(.blue)
+                        .padding()
                     }
                     
                
