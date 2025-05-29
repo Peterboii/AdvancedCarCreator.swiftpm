@@ -33,5 +33,8 @@ struct DrawingView: View {
     func saveDrawing(_ drawing: PKDrawing) {
         savedDrawingData = drawing.dataRepresentation()
     }
+    func loadDrawing() -> PKDrawing {
+       (try? PKDrawing(data: savedDrawingData)) ?? PKDrawing()
+    }
 }
 
