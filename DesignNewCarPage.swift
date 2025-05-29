@@ -2,6 +2,7 @@ import SwiftUI
 import PencilKit
 
 struct DesignNewCarPage: View {
+
     var body: some View {
         Text("Car Design")
             .font(.system(size: 32, design: .serif))
@@ -25,6 +26,9 @@ struct DrawingView: View {
             .padding()
         }
         .navigationBarTitle("", displayMode: .inline)
+    }
+    func saveDrawing(_ drawing: PKDrawing) {
+        saveDrawingData = drawing.dataRepresentation()
     }
 }
 
